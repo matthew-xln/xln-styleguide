@@ -1,6 +1,6 @@
 # [XLN Code Style Guide](../README.md) - CSS / Sass
 
-> Loosely based on the [Airbnb CSS / Sass guidelines](https://github.com/airbnb/css)*
+> Loosely based on the [Airbnb CSS / Sass guidelines](https://github.com/airbnb/css)
 
 ## Table of Contents 
   1. [CSS](#css)
@@ -44,7 +44,7 @@
 * Lowercase all hex values, e.g., `#fff`
 * Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`
 * Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`
-* `!important` should never be used to override - if it has to be used please place it in `shame.scss` [Read more about shame.scss](#shame)
+* Avoid overriding with `!important` - place in `shame.scss` if it has to be used [Read more about shame.scss](#shame)
 
 ```css
 // Not recommended
@@ -107,12 +107,10 @@ span { ... }
 }
 ```
 
-
 **[⬆ back to top](#table-of-contents)**
 
 ### Naming convention
 * Under review. Consider a hybrid mix of [BEM and OOCSS](http://timhartmann.net/frontend-development/scss-styleguide-with-bem-oocss-smacss/)
-
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -123,13 +121,11 @@ span { ... }
     - Uses of z-index
     - Compatibility or browser-specific hacks
 
-
 **[⬆ back to top](#table-of-contents)**
 
 ### ID Selectors
 * ID selectors introduce a high level of specificity and should be avoided
 * [Read more](https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/) about CSS specificity
-
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -178,6 +174,8 @@ Use `0` instead of `none` to specify that a style has no border
     color: #BADA55 !important;
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Sass
 
