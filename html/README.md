@@ -16,7 +16,7 @@
 ## General style rules
 
 ### Protocol
-* Omit the protocol from embedded resources - prevents mixed content issues and results in minor file size savings.
+Omit the protocol from embedded resources - prevents mixed content issues and results in minor file size savings.
 
 ```html
 <!-- Not recommended -->
@@ -29,12 +29,12 @@
 **[⬆ back to top](#table-of-contents)**
 
 ### Indentation
-* Soft tabs (4 spaces) for indentation 
+Soft tabs (4 spaces) for indentation 
 
 **[⬆ back to top](#table-of-contents)**
 
 ### Capitilization 
-* All code must be lowercase - elements, attributes, attribute values (except `text/CDATA`) etc
+All code must be lowercase - elements, attributes, attribute values (except `text/CDATA`) etc
 
 ```html
 <!-- Not recommended -->
@@ -47,7 +47,7 @@
 **[⬆ back to top](#table-of-contents)**
 
 ### Comments
-* Comment external snippets and files
+Comment external snippets and files
 
 ```html
 <!-- Google Analytics -->
@@ -68,7 +68,7 @@ ga('send', 'pageview');
 ## HTML style rules
 
 ### Multimedia fallback
-* For multimedia, such as images, videos, animated objects via canvas, make sure to offer alternative access. For images that means use of meaningful alternative text (alt) and for video and audio transcripts and captions, if available.
+For multimedia, such as images, videos, animated objects via canvas, make sure to offer alternative access. For images that means use of meaningful alternative text (alt) and for video and audio transcripts and captions, if available.
 
 ```html
 <!-- Not recommended -->
@@ -81,7 +81,7 @@ ga('send', 'pageview');
 **[⬆ back to top](#table-of-contents)**
 
 ### Type attributes
-* It is not necessary to specify type attributes 
+It is not necessary to specify type attributes 
 
 ```html
 <!-- Not recommended -->
@@ -102,7 +102,7 @@ ga('send', 'pageview');
 **[⬆ back to top](#table-of-contents)**
 
 ### HTML quotation marks
-* Use double `"` quotation marks rather than single quotation marks `'` around attribute values
+Use double `"` quotation marks rather than single quotation marks `'` around attribute values
 ```html 
 <!-- Not recommended -->
 <a class='maia-button maia-button-secondary'>Sign in</a>
