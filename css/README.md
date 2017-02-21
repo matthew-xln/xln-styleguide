@@ -1,6 +1,6 @@
 # [XLN Code Style Guide](../README.md) - CSS / Sass
 
-*Loosely based on the [Airbnb CSS / Sass guidelines](https://github.com/airbnb/css)*
+> Loosely based on the [Airbnb CSS / Sass guidelines](https://github.com/airbnb/css)*
 
 ## Table of Contents 
   1. [CSS](#css)
