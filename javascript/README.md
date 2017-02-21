@@ -1,6 +1,6 @@
 # [XLN Code Style Guide](../README.md) - JavaScript
 
-*A mostly reasonable approach to JavaScript forked from [Airbnb's excellent guide](https://github.com/airbnb/javascript)*
+> A mostly reasonable approach to JavaScript forked from [Airbnb's excellent guide](https://github.com/airbnb/javascript)*
 
 ## Table of Contents
 
