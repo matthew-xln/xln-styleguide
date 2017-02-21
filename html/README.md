@@ -9,6 +9,9 @@
     - [Comments](#comments)
   1. [HTML style rules](#html-style-rules)
     - [Multimedia fallback](#multimedia-fallback)
+    - [Separation of concerns](#separation-of-concerns)
+    - [Type attributes](#type-attributes)
+    - [HTML quotation marks](#html-quotation-marks)
 
 ## General style rules
 
@@ -66,3 +69,46 @@ ga('send', 'pageview');
 
 ### Multimedia fallback
 * For multimedia, such as images, videos, animated objects via canvas, make sure to offer alternative access. For images that means use of meaningful alternative text (alt) and for video and audio transcripts and captions, if available.
+
+```html
+<!-- Not recommended -->
+<img src="spreadsheet.png">
+
+<!-- Recommended -->
+<img src="spreadsheet.png" alt="Spreadsheet screenshot.">
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+### Type attributes
+* It is not necessary to specify type attributes 
+
+```html
+<!-- Not recommended -->
+<link rel="stylesheet" href="//www.google.com/css/maia.css"
+  type="text/css">
+
+<!-- Recommended -->
+<link rel="stylesheet" href="//www.google.com/css/maia.css">
+
+<!-- Not recommended -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"
+  type="text/javascript"></script>
+
+<!-- Recommended -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+### HTML quotation marks
+* Use double `"` quotation marks rather than single quotation marks `'` around attribute values
+```html 
+<!-- Not recommended -->
+<a class='maia-button maia-button-secondary'>Sign in</a>
+
+<!-- Recommended -->
+<a class="maia-button maia-button-secondary">Sign in</a>
+```
+
+**[⬆ back to top](#table-of-contents)**
