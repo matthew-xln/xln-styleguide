@@ -12,6 +12,7 @@
     - [ID Selectors]()
     - [JavaScript hooks](#javascript-hooks)    
     - [Border](#border)
+    - [Shame](#shame)
   1. [Sass](#sass)
     - [Naming variables](#naming-variables)
     - [Ordering of property declarations](#ordering-of-property-declarations)
@@ -43,21 +44,18 @@
 * Lowercase all hex values, e.g., `#fff`
 * Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`
 * Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`
-
-**Bad**
+* `!important` should never be used to override - if it has to be used please place it in `shame.scss` [Read more about shame.scss](#shame)
 
 ```css
+// Not recommended
 .selector, .selector-secondary, .selector[type=text] {
     background-color:rgba(0, 0, 0, 0.5);
     box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF;
     margin:0px 0px 15px;
     padding:15px;
 }
-```
 
-**Good**
-
-```css
+// Recommended
 .selector,
 .selector-secondary,
 .selector[type="text"] {
@@ -75,17 +73,13 @@
 * Keep selectors short and strive to limit the number of elements in each selector to three
 * Scope classes to the closest parent **only** when necessary
 
-**Bad**
-
 ```css
+// Not recommended
 span { ... }
 .page-container #stream .stream-item .tweet .tweet-header .username { ... }
 .avatar { ... }
-```
 
-**Good**
-
-```css
+// Recommended
 .avatar { ... }
 .tweet-header .username { ... }
 .tweet .avatar { ... }
@@ -152,23 +146,38 @@ span { ... }
 ### Border 
 Use `0` instead of `none` to specify that a style has no border
 
-**Bad**
-
 ```css
+// Not recommended
 .foo {
   border: none;
 }
-```
 
-**Good**
-
-```css
+// Recommended
 .foo {
   border: 0;
 }
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+### Shame 
+* Any quick fix/hacky code should live in the `shame.scss` file 
+* Document all hacks fully:
+  - What part of the codebase does it relate to?
+  - Why was this needed?
+  - How does this fix it?
+  - How might you fix it properly, given more time?
+* Clean `shame.scss` when there is down time
+
+```scss
+// Nav specificity fix.
+// Someone used an ID in the header code (`#header a {}`) which trumps the
+// nav selectors (`.site-nav a {}`). Use !important to override it until I
+// have time to refactor the header stuff.
+.site-nav a {
+    color: #BADA55 !important;
+}
+```
 
 ## Sass
 
@@ -177,17 +186,12 @@ Use `0` instead of `none` to specify that a style has no border
 * Prefer dashed-case variable names (e.g. `$my-variable`). 
 * Add a `prefix-` to allow for better readability
 
-**Bad**
-
 ```scss
-// Bad
+// Not recommended
 $red: red;
 $yellow: yellow;
-```
 
-**Good**
-
-```scss
+// Recommended
 $color-brand: red;
 $color-accent: yellow;
 ```
