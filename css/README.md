@@ -281,7 +281,6 @@ File architecture is based on the *7-1 Pattern:* All partials are categorized in
 * `vendors/`
 * `main.scss`
 
-
 **Example file architecture**
 
 ```scss
@@ -336,21 +335,31 @@ sass/
 
 The `base/` folder holds what we might call the boilerplate code for the project. 
 
+---
+
 ### Components folder
 
 For small components, there is the `components/` folder. While `layout/` is macro (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. 
+
+---
 
 ### Layout folder
 
 The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms.
 
+---
+
 ### Pages folder
 
 If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
 
+---
+
 ### Themes folder
 
 The themes folder holds files that create project specific themes ie `admin` and `default`.
+
+---
 
 ### Vendors folder
 
@@ -358,11 +367,15 @@ CSS files from external libraries and frameworks live here.
 
 If you have to override a section of any vendor, create an 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite. For instance, `vendors-extensions/_bootstrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap’s default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
 
+---
+
 ### Abstracts folder
 
 The `abstracts/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
 
 The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
+
+---
 
 ### Main file
 
