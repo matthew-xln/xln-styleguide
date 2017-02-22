@@ -8,6 +8,8 @@
   1. [Code Reviews](#code-reviews)
   1. [The Git Commandments](#the-git-commandments)
 
+---
+
 ### Feature Branch Workflow
 All feature development should be done in a dedicated branch, never in the master branch. This will ensure that the master branch doesn’t contain partial or non-functional code and that hotfixes can always quickly be pushed and deployed.
 
@@ -17,6 +19,8 @@ As a team we should strive towards making many smaller releases, where functiona
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### Git Commits
 Commits should only contain single sets of functionality. If a developer has made bugfixes and addressed requested quickfixes while working on a new set of features, these should be split into separate commits. This will help keep commit history clear and make it easier to cherry pick general fixes from feature branches.
 
@@ -24,9 +28,11 @@ Capitalize the first letter, limit subject to 50 characters and don’t use peri
 
 The subject line should be written in imperative, meaning descriptions should be written as if they are in present tense versus past tense. As an example, write “Fix typo in page footer” instead of writing “Fixed typo...”. This is in line with Git’s own commit messages. Note that this does not need to be enforced on the body.
 
->> Quick tip, write the subjects thinking: This commit will …...
+> Quick tip, write the subjects thinking: This commit will …...
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Code Reviews
 When a feature branch has been completed any changes done to the master branch should be merged into the current feature branch. The developer should then request a Code Review session.
@@ -34,6 +40,8 @@ When a feature branch has been completed any changes done to the master branch s
 During code review sessions we should primarily look for bugs or logic flaws as well as code that’s badly structured and difficult to follow. We should also look for typos and code that doesn’t follow our internal guidelines. Once the code has been approved it should be merged back into the master branch and deployed.
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### The Git Commandments
 * Master should never contain broken or non-functional code
