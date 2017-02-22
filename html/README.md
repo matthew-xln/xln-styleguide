@@ -13,6 +13,8 @@
     - [Type attributes](#type-attributes)
     - [HTML quotation marks](#html-quotation-marks)
 
+---
+
 ## General style rules
 
 ### Protocol
@@ -28,10 +30,14 @@ Omit the protocol from embedded resources - prevents mixed content issues and re
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### Indentation
 Soft tabs (4 spaces) for indentation 
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Capitilization 
 All code must be lowercase - elements, attributes, attribute values (except `text/CDATA`) etc
@@ -45,6 +51,8 @@ All code must be lowercase - elements, attributes, attribute values (except `tex
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Comments
 Comment external snippets and files
@@ -65,6 +73,8 @@ ga('send', 'pageview');
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ## HTML style rules
 
 ### Multimedia fallback
@@ -79,6 +89,8 @@ For multimedia, such as images, videos, animated objects via canvas, make sure t
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Type attributes
 It is not necessary to specify type attributes 
@@ -100,6 +112,8 @@ It is not necessary to specify type attributes
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### HTML quotation marks
 Use double `"` quotation marks rather than single quotation marks `'` around attribute values

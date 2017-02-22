@@ -27,6 +27,8 @@
     - [Abstracts folder](#abstracts-folder)
     - [Main file](#main-file)
 
+---
+
 ## CSS
 
 ### Syntax
@@ -68,6 +70,8 @@
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### Selectors 
 * Use classes over generic element tag for optimum rendering performance
 * Keep selectors short and strive to limit the number of elements in each selector to three
@@ -85,8 +89,9 @@ span { ... }
 .tweet .avatar { ... }
 ```
 
-
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Declaration order
 * Property declarations should be in alphabetical order
@@ -109,10 +114,14 @@ span { ... }
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### Naming convention
 * Under review. Consider a hybrid mix of [BEM and OOCSS](http://timhartmann.net/frontend-development/scss-styleguide-with-bem-oocss-smacss/)
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Comments
 * Prefer single line comments `//` since these are removed when compiled by Sass
@@ -123,11 +132,15 @@ span { ... }
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### ID Selectors
 * ID selectors introduce a high level of specificity and should be avoided
 * [Read more](https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/) about CSS specificity
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### JavaScript hooks
 * Avoid binding the same class in both your CSS and JavaScript
@@ -138,6 +151,8 @@ span { ... }
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Border 
 Use `0` instead of `none` to specify that a style has no border
@@ -155,6 +170,8 @@ Use `0` instead of `none` to specify that a style has no border
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Shame 
 * Any quick fix/hacky code should live in the `shame.scss` file 
@@ -177,6 +194,8 @@ Use `0` instead of `none` to specify that a style has no border
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ## Sass
 
 ### Naming variables
@@ -195,6 +214,8 @@ $color-accent: yellow;
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ### Ordering of property declarations
 
@@ -229,6 +250,8 @@ The different items in a Sass rule set go in the following order:
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ### Nested selectors
 Do not nest selectors more than three levels deep
 
@@ -243,6 +266,8 @@ Do not nest selectors more than three levels deep
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ## Architecture 
 File architecture is based on the *7-1 Pattern:* All partials are categorized into 7 different folders, and a single file at root level (`main.scss`) which imports them all to be complied into a CSS stylesheet.

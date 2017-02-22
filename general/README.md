@@ -6,6 +6,8 @@
   1. [The Golden Rule](#the-golden-rule)
   2. [Filenames](#filenames)
 
+---
+
 ## The Golden Rule
 Follow the style of the file you're in. It's more important to be contextually correct than it is to be absolutely correct.
 
