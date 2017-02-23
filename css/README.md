@@ -141,7 +141,7 @@ We recommend BEM for the following reasons:
 
 ```scss
 .menu {
-  background: #0B2027;
+  // ...
 }
 
 .menu__trigger {
@@ -160,8 +160,9 @@ We recommend BEM for the following reasons:
   // ...
 }
 
-menu__list--white {
-  // Modifier style
+.menu__list--white {
+  // Modifier
+  color: white;
 }
 
 .menu__link {
