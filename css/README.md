@@ -9,14 +9,13 @@
     - [Declaration order](#declaration-order)
     - [Naming convention](#naming-convention)
     - [Comments](#comments)   
-    - [ID Selectors]()
+    - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)    
     - [Border](#border)
     - [Shame](#shame)
   1. [Sass](#sass)
     - [Naming variables](#naming-variables)
     - [Ordering of property declarations](#ordering-of-property-declarations)
-    - [Nested selectors](#nested-selectors)
   1. [Architecture](#architecture)
     - [Base folder](#base-folder)
     - [Components folder](#components-folder)
@@ -50,7 +49,7 @@
 
 ```css
 // Not recommended
-.selector, .selector-secondary, .selector[type=text] {
+.selector, .selector-secondary {
     background-color:rgba(0, 0, 0, 0.5);
     box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF;
     margin:0px 0px 15px;
@@ -59,8 +58,7 @@
 
 // Recommended
 .selector,
-.selector-secondary,
-.selector[type="text"] {
+.selector-secondary {
     background-color: rgba(0,0,0,.5);
     box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
     margin-bottom: 15px;
@@ -74,20 +72,6 @@
 
 ### Selectors 
 * Use classes over generic element tag for optimum rendering performance
-* Keep selectors short and strive to limit the number of elements in each selector to three
-* Scope classes to the closest parent **only** when necessary
-
-```css
-// Not recommended
-span { ... }
-.page-container #stream .stream-item .tweet .tweet-header .username { ... }
-.avatar { ... }
-
-// Recommended
-.avatar { ... }
-.tweet-header .username { ... }
-.tweet .avatar { ... }
-```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -117,7 +101,129 @@ span { ... }
 ---
 
 ### Naming convention
-* Under review. Consider a hybrid mix of [BEM and OOCSS](http://timhartmann.net/frontend-development/scss-styleguide-with-bem-oocss-smacss/)
+We recommend BEM for the following reasons:
+* Avoids CSS conflicts
+* Helps create clear, strict relationships between CSS and HTML
+* Less nesting and lower specificity
+* Clear separation between default Bootstrap classes and BEM classes
+
+```html
+<div class="menu">
+
+  <a href="#" class="menu__trigger js-trigger">
+    <i class="ion-navicon-round"></i>
+  </a>
+
+  <ul class="menu__row">
+
+    <li class="menu__list">
+      <a href="#" class="menu__link">About</a>
+    </li>
+
+    <li class="menu__list">
+      <a href="#" class="menu__link">Blog</a>
+    </li>
+    
+    <li class="menu__list">
+      <a href="#" class="menu__link">Contact</a>
+    </li>
+
+  </ul>
+</div>
+```
+
+```scss
+.menu {
+  background: #0B2027;
+}
+
+.menu__trigger {
+  background: #16414f;
+  float: left;
+  padding: 1.3rem 0;
+  width: 10%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: .3s;
+          transition: .3s;
+}
+@media (min-width: 30em) and (max-width: 40em) {
+  .menu__trigger {
+    width: 15%;
+  }
+}
+@media (max-width: 30em) {
+  .menu__trigger {
+    width: 15%;
+  }
+}
+
+.menu__trigger--active {
+  background: salmon;
+}
+
+.menu__row {
+  width: 90%;
+  font-size: 0;
+}
+
+.menu__list {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 1.2rem;
+}
+
+.menu__link {
+  display: block;
+  text-decoration: none;
+  padding: 1.5rem;
+  color: white;
+  font-weight: 500;
+  -webkit-transition: .3s;
+          transition: .3s;
+}
+@media (max-width: 30em) {
+  .menu__link {
+    padding: 1.5rem 0.6rem;
+  }
+}
+.menu__link:hover {
+  background: #16414f;
+}
+
+.menu__dropdown {
+  padding: 1.6rem 0;
+  background: salmon;
+  display: none;
+}
+
+.menu__col {
+  width: 33.333%;
+  float: left;
+  padding: 2.5rem 1.5rem;
+}
+@media (min-width: 40em) and (max-width: 50em) {
+  .menu__col {
+    width: 100%;
+  }
+}
+@media (min-width: 30em) and (max-width: 40em) {
+  .menu__col {
+    width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  .menu__col {
+    width: 100%;
+  }
+}
+```
+
+Some great articles on BEM:
+* [CSS Wizardry's MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* [CSS Tricks BEM 101](https://css-tricks.com/bem-101/)
+
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -135,7 +241,8 @@ span { ... }
 ---
 
 ### ID Selectors
-* ID selectors introduce a high level of specificity and should be avoided
+* ID selectors introduce a high level of specificity and should be avoided for styling
+* ID's can be used for anchor links and Bootstrap components that require ID's
 * [Read more](https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/) about CSS specificity
 
 **[⬆ back to top](#table-of-contents)**
@@ -225,7 +332,6 @@ The different items in a Sass rule set go in the following order:
 1. Mixin inclusions with `@include` with the exception of media queries
 1. Pseudo-class/element nesting with `&`
 1. Media queries
-1. Regular selector nesting (if necessary)
 
     ```scss
     .element {
@@ -241,29 +347,8 @@ The different items in a Sass rule set go in the following order:
         // Styles here
       }
       
-      .nested {
-        // Styles here
-      }
-      
     }
     ```
-
-**[⬆ back to top](#table-of-contents)**
-
----
-
-### Nested selectors
-Do not nest selectors more than three levels deep
-
-```css
-.page-container {
-  .content {
-    .profile {
-      // STOP!
-    }
-  }
-}
-```
 
 **[⬆ back to top](#table-of-contents)**
 
