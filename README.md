@@ -7,3 +7,4 @@
 * [HTML Style Guide](/html/README.md)
 * [CSS/Sass Style Guide](/css/README.md)
 * [Javascript Style Guide](/javascript/README.md)
+* [PHP Style Guide](/php/README.md)
