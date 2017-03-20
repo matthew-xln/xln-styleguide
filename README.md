@@ -2,9 +2,4 @@
 
 > Code style guides for programming languages at XLN Audio
 
-* [General Style Guide](/general/README.md)
-* [Git Repository Guide](/git/README.md)
-* [HTML Style Guide](/html/README.md)
-* [CSS/Sass Style Guide](/css/README.md)
-* [Javascript Style Guide](/javascript/README.md)
-* [PHP Style Guide](/php/README.md)
+Please refer to the [Wiki documentation](https://github.com/xlnaudio/xln-styleguide/wiki)
